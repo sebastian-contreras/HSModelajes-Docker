@@ -1,0 +1,6 @@
+[submodule "HSModelaje-frontend"]
+	path = HSModelaje-frontend
+	url = https://github.com/sebastian-contreras/HSModelaje-front.git
+[submodule "HSModelaje-backend"]
+  path = HSModelaje-backend
+  url = https://github.com/sebastian-contreras/HSModelaje-backend.git
