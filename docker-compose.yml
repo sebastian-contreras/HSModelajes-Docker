@@ -51,7 +51,9 @@ services:
       - laravel-exa
 
     command: >
+        cp .env.example .env &&
         sh -c "while ! nc -z db 3306; do sleep 5; done &&
+        php artisan key:generate &&
         php artisan migrate:fresh --seed --force &&
         php artisan serve --host=0.0.0.0"
 
