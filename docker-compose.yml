@@ -48,6 +48,9 @@ services:
       MAIL_ENCRYPTION: tls
       MAIL_FROM_ADDRESS: "hsmodelaje@gmail.com"
       MAIL_FROM_NAME: "HSModelaje"
+      SANCTUM_STATEFUL_DOMAINS: Serve:5173
+
+
     networks:
       - laravel-exa
     command: >
