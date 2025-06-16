@@ -59,9 +59,21 @@ services:
         php artisan key:generate &&
         php artisan config:cache &&
         php artisan migrate:fresh --seed --force &&
-        php artisan serve --host=0.0.0.0 --port=8000 &&
-        php artisan reverb:start --debug
+        php artisan serve --host=0.0.0.0 --port=8000
         "
+
+    # Laravel Websockets con Reverb
+  websocket:
+    container_name: websocket-server
+    build:
+      context: ./HSModelaje-backend
+      dockerfile: Dockerfile
+    command: php artisan reverb:start --debug
+    depends_on:
+      - main
+    networks:
+      - laravel-exa
+
 
   queue:
     container_name: Queue
