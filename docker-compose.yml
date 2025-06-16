@@ -48,7 +48,8 @@ services:
       MAIL_ENCRYPTION: tls
       MAIL_FROM_ADDRESS: "hsmodelaje@gmail.com"
       MAIL_FROM_NAME: "HSModelaje"
-      SANCTUM_STATEFUL_DOMAINS: Serve:5173
+      SANCTUM_STATEFUL_DOMAINS: Serve:3000
+      FRONTEND_URL: "http://localhost:3000"
 
 
     networks:
@@ -71,9 +72,10 @@ services:
     command: php artisan reverb:start --debug
     depends_on:
       - main
+    ports:
+      - "8080:8080"   # 👈 Agregá esto
     networks:
       - laravel-exa
-
 
   queue:
     container_name: Queue
