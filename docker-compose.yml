@@ -50,6 +50,14 @@ services:
       MAIL_FROM_NAME: "HSModelaje"
       SANCTUM_STATEFUL_DOMAINS: Serve:3000
       FRONTEND_URL: "http://localhost:3000"
+      REVERB_ENABLED: true
+      REVERB_APP_ID:  972110
+      REVERB_APP_KEY: eq6doihjm8dcke8g263o
+      REVERB_APP_SECRET:  tldw8swjb6rt1dawa2xp
+      REVERB_HOST:  websocket-server
+      REVERB_PORT:  8080
+      REVERB_SCHEME:  http
+
 
 
     networks:
@@ -116,6 +124,9 @@ services:
     container_name: frontend
     environment:
       VITE_API_URL: 'http://Serve:8000'
+      VITE_WS_HOST: localhost
+      VITE_WS_PORT: 8080
+      VITE_PUSHER_KEY: eq6doihjm8dcke8g263o
     build:
       context: ./HSModelaje-frontend
       dockerfile: Dockerfile
