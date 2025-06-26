@@ -50,6 +50,7 @@ services:
       MAIL_FROM_NAME: "HSModelaje"
       SANCTUM_STATEFUL_DOMAINS: Serve:3000
       FRONTEND_URL: "http://localhost:3000"
+      BROADCAST_DRIVER: reverb
       REVERB_ENABLED: true
       REVERB_APP_ID:  972110
       REVERB_APP_KEY: eq6doihjm8dcke8g263o
