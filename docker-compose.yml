@@ -83,6 +83,14 @@ services:
     command: php artisan reverb:start --debug
     depends_on:
       - main
+    environment:
+      REVERB_ENABLED: true
+      REVERB_APP_ID:  972110
+      REVERB_APP_KEY: eq6doihjm8dcke8g263o
+      REVERB_APP_SECRET:  tldw8swjb6rt1dawa2xp
+      REVERB_HOST:  websocket-server
+      REVERB_PORT:  8080
+      REVERB_SCHEME:  http
     ports:
       - "8080:8080"   # 👈 Agregá esto
     networks:
