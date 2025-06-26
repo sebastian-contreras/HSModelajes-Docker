@@ -58,7 +58,9 @@ services:
       REVERB_HOST:  websocket-server
       REVERB_PORT:  8080
       REVERB_SCHEME:  http
-
+      REDIS_HOST: 127.0.0.1
+      REDIS_PASSWORD: null
+      REDIS_PORT: 6379
 
 
     networks:
