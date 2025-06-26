@@ -106,6 +106,33 @@ services:
       - db
     networks:
       - laravel-exa
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: HSModelaje_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      MAIL_MAILER: smtp
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 465
+      MAIL_USERNAME: hsmodelaje@gmail.com
+      MAIL_PASSWORD: kyfkcdcbphvcvinz
+      MAIL_ENCRYPTION: tls
+      MAIL_FROM_ADDRESS: "hsmodelaje@gmail.com"
+      MAIL_FROM_NAME: "HSModelaje"
+      SANCTUM_STATEFUL_DOMAINS: Serve:3000
+      FRONTEND_URL: "http://localhost:3000"
+      BROADCAST_DRIVER: reverb
+      REVERB_ENABLED: true
+      REVERB_APP_ID:  972110
+      REVERB_APP_KEY: eq6doihjm8dcke8g263o
+      REVERB_APP_SECRET:  tldw8swjb6rt1dawa2xp
+      REVERB_HOST:  websocket-server
+      REVERB_PORT:  8080
+      REVERB_SCHEME:  http
+      REDIS_HOST: 127.0.0.1
+      REDIS_PASSWORD: null
+      REDIS_PORT: 6379
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
