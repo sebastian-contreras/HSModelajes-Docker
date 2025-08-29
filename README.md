@@ -64,3 +64,8 @@ Organizador:  email: admin@admin.com / contraseña: password
 Moderador:  email: moderador@moderador.com	 / contraseña: password
 Guardia:  email: portero@portero.com	 / contraseña: password
 
+
+
+##  Documentacion API
+
+http://localhost:8000/request-docs
