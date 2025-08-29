@@ -49,7 +49,18 @@ Mailpit	http://localhost:8025	Emails de prueba
 Recrear entorno desde cero (borrando volúmenes):
 
 docker compose down -v
+
 docker compose up --build
 
 Ver contenedores activos:
 docker ps
+
+
+##  Usuarios
+
+Usuarios
+
+Organizador:  email: admin@admin.com / contraseña: password
+Moderador:  email: moderador@moderador.com	 / contraseña: password
+Guardia:  email: portero@portero.com	 / contraseña: password
+
